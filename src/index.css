@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: #18181b;
+  color: rgb(244, 247, 248);
+}
+
+/* ========================================
+   Application Management Specialist
+   ======================================== */
+.typing-title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+
+  animation:
+    typing 3s steps(35, end) forwards,
+    float-title 3s ease-in-out 3.4s infinite,
+    color-pulse 2.5s ease-in-out 3.4s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 52ch;
+  }
+}
+
+/* =========================
+   Blinking Cursor
+========================= */
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 18px;
+  margin-left: 6px;
+  background: #2563eb;
+
+  animation:
+    cursor-blink 0.75s step-end infinite,
+    cursor-glow 1.8s ease-in-out infinite;
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================
+   Cursor Glow
+========================= */
+
+@keyframes cursor-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 2px rgba(37, 99, 235, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.9);
+  }
+}
+
+
+/* =========================
+   Text Position Effect
+========================= */
+
+@keyframes float-title {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+
+/* =========================
+   Color / Glow Effect
+========================= */
+
+@keyframes color-pulse {
+  0%,
+  100% {
+    color: #2563eb;
+    text-shadow: 0 0 0 transparent;
+  }
+
+  50% {
+    color: #3b82f6;
+    text-shadow:
+      0 0 8px rgba(37, 99, 235, 0.35),
+      0 0 18px rgba(37, 99, 235, 0.15);
+  }
+}
