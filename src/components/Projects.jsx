@@ -44,7 +44,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="group rounded-2xl border border-zinc-500 p-7 transition hover:-translate-y-3 hover:shadow-lg dark:border-zinc-800 dark:hover:shadow-white/40"
+              className="group rounded-2xl border   border-zinc-500 p-7 transition hover:-translate-y-3 hover:shadow-lg dark:border-zinc-800 hover:shadow-zinc-900/40 dark:hover:shadow-white/40 "
             >
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-zinc-400">

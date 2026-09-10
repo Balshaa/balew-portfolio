@@ -14,13 +14,19 @@ export default function Hero() {
 
   <span className="typing-cursor"></span>
 </p>
-
-          <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl dark:text-white">
-            Hi, I'm{" "}
-            <span className="text-blue-600">
-              Balew Derseh.
-            </span>
-          </h1>
+<h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl dark:text-white">
+  Hi all, I'm{" "}
+  
+  <span className="text-blue-600">
+    Balew Derseh
+    <img
+  alt="👋"
+  draggable={false}
+  src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png"
+  className="inline-block h-[1em] w-[1em] ml-2 align-[-0.1em] waving-hand"
+/>
+  </span>
+</h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             I work at the intersection of banking technology, application
@@ -66,25 +72,68 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hidden justify-end md:flex">
-          <div className="relative">
-            <div className="flex h-72 w-72 items-center justify-center rounded-3xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
-              <span className="text-8xl font-bold text-zinc-200 dark:text-zinc-700">
-                BD
-              </span>
-            </div>
+<div className="hidden justify-end md:flex">
+  <div className="relative">
 
-            <div className="absolute -bottom-5 -left-5 rounded-xl border border-zinc-200 bg-white px-5 py-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-              <p className="text-xs text-zinc-500">
-                Focused on
-              </p>
+    {/* Main developer card */}
+    <div className="flex h-72 w-72 items-center justify-center rounded-3xl border border-zinc-300 bg-zinc-200 dark:border-zinc-800 dark:bg-zinc-900">
 
-              <p className="mt-1 font-semibold text-zinc-900 dark:text-white">
-                Banking Technology
-              </p>
-            </div>
+      <div className="w-60">
+
+        {/* Developer icon */}
+<div className="mb-4 text-center text-9xl animate-developer">
+  👨‍💻
+</div>
+
+<p className="font-mono text-xs text-zinc-600 dark:text-zinc-400 animate-typing">
+  <span className="text-green-500">$</span> npm run deploy
+  <span className="ml-1 animate-cursor">|</span>
+</p>
+
+<p className="mt-2 text-xs font-semibold text-green-600 dark:text-green-400 animate-success-completed">
+  ✓ Successfully completed
+</p>
+
+
+
+        {/* Mini terminal */}
+        <div className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-700 dark:bg-zinc-950">
+
+          {/* Terminal dots */}
+          <div className="mb-3 flex gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
+            <span className="h-2 w-2 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
+            <span className="h-2 w-2 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
           </div>
+
+          {/* Code */}
+          <p className="font-mono text-xs text-zinc-600 dark:text-zinc-400">
+            <span className="text-green-500">$</span>{" "}
+            npm run deploy
+            <span className="ml-1 animate-pulse">|</span>
+          </p>
+
         </div>
+
+      </div>
+
+    </div>
+
+    {/* Floating information card */}
+    <div className="absolute -bottom-5 -left-5 rounded-xl border border-zinc-200 bg-white px-5 py-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+
+      <p className="text-xs text-blue-600 font-bold">
+        Focused on
+      </p>
+
+      <p className="mt-1 font-semibold text-zinc-900 dark:text-white">
+        Banking Technology
+      </p>
+
+    </div>
+
+  </div>
+</div>
 
       </div>
     </section>

@@ -16,12 +16,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <a
-          href="#home"
-          className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white"
-        >
-          Home<span className="text-blue-600"></span>
-        </a>
+      <a href="/" className="logo">
+  <span className="grey-color">&lt;</span>
+  <span className="logo-name text-zinc-60">Balew Derseh</span>
+  <span className="grey-color">/&gt;</span>
+</a>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
